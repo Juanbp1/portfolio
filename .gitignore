@@ -16,6 +16,7 @@ dist
 dist-ssr
 vite-output
 build
+src/output.css
 
 # Local environment files
 *.local
