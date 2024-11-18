@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "deploy" : "firebase deploy --only hosting:juanmanuelportfolio",
+    "deploy": "firebase deploy --only hosting:juanmanuelportfolio",
+    "coverage": "npx vitest --coverage",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "build": "vite build",
@@ -39,3 +40,4 @@
     "vitest": "^2.1.5"
   }
 }
+
