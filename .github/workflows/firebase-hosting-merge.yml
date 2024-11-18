@@ -33,7 +33,7 @@ jobs:
 
       # Evitar el despliegue durante las pruebas
       - name: Set DEPLOY variable to false for testing
-        run: echo "DEPLOY=false" >> $GITHUB_ENV
+        run: echo "DEPLOY=false" >> GITHUB_ENV
 
       - name: Deploy to Firebase Hosting
         if: env.DEPLOY == 'true'
