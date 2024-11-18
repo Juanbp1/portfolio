@@ -34,3 +34,7 @@ src/output.css
 
 # Coverage
 coverage
+
+# Firebase
+firebase
+.firebaserc
