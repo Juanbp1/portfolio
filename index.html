@@ -10,12 +10,12 @@
       if (import.meta.env.MODE === 'development') {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/src/output.css';
+        link.href = './src/output.css';
         document.head.appendChild(link);
       } else if (import.meta.env.MODE === 'production') {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/public/styles.css';
+        link.href = './build/styles.css';
         document.head.appendChild(link);
       }
     </script>
