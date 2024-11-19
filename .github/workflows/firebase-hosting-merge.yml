@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Compile tailwind to CSS
-        run: npm run tailwind
+        run: npm run tailwind-build
 
       - name: Run tests
         if: success()  # Solo ejecutará este paso si los tests fueron exitosos
