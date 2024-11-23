@@ -8,6 +8,7 @@ export default {
         primaryDark: "#0e038c",
         "primary-light": "#F5F5FF",
         secondary: "#FFCF28",
+        "secondary-light":"#fbe9aa",
 
         // Escala de grises
         light: "#FFFFFF",
