@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -9,7 +9,7 @@ export default {
         primaryDark: "#0e038c",
         "primary-light": "#F5F5FF",
         secondary: "#FFCF28",
-        "secondary-light":"#fbe9aa",
+        "secondary-light": "#fbe9aa",
 
         // Escala de grises
         light: "#FFFFFF",
@@ -27,7 +27,27 @@ export default {
         success: "#28a745",
         error: "#dc3545",
         info: "#17a2b8",
+        darkMode: {
+          primary: "#0e038c",
+          "primary-light": "#d6d1ff",
+          secondary: "#e5af00",
+          "secondary-light": "#c7a969",
+          light: "#1f1f1f",
+          "gray-50": "#1e1e1e",
+          "gray-100": "#2c2c2c",
+          "gray-200": "#404040",
+          "gray-300": "#555555",
+          "gray-400": "#6a6a6a",
+          "gray-500": "#858585",
+          "gray-600": "#b1b1b1",
+          dark: "#ffffff",
+          warning: "#d49d07",
+          success: "#1e7a37",
+          error: "#a72835",
+          info: "#11667c",
+        },
       },
+
       fontSize: {
         "h1-lg": "70px",
         "h2-md": "50px",
@@ -56,6 +76,7 @@ export default {
       },
       maxWidth: {
         container: "1560px",
+        header: "1735px",
       },
     },
   },
