@@ -129,10 +129,10 @@ export default {
           fontWeight: "500",
         },
         ".link:hover": {
-          fontWeight: "600",
+          transform: "scale(1.1)"
+
         },
         ".link:active": {
-          fontWeight: "700",
           color: theme("colors.primary"),
           textDecoration: "underline",
           textDecorationThickness: "3px",
