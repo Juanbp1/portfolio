@@ -33,7 +33,7 @@ const DarkModeToogle = () => {
 
       {/* El slider estilizado */}
       <div className="relative">
-        <div className="flex h-9 w-20 items-center rounded-full bg-secondary p-1 transition-colors duration-300 dark:bg-primary">
+        <div className="flex h-9 w-20 items-center rounded-full bg-accent p-1 transition-colors duration-300 dark:bg-primary">
           <IoMoon className="absolute right-1.5 z-10 size-size-md text-white dark:text-black" />
           <IoSunny className="absolute left-1.5 z-10 size-size-md text-dark dark:text-white" />
 

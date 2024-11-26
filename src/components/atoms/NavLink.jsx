@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const NavLink = ({ to, label }) => {
   return (
-    <a className={`link link:hover link:active`} href={to}>
+    <a className={`link link:hover link:active dark:active:text-darkMode-primary-light`} href={to}>
       {label}
     </a>
   );
