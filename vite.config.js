@@ -14,7 +14,7 @@ export default defineConfig({
       reportsDirectory: './coverage',
       reporter: ['text', 'html'], // Tipos de reportes: texto, HTML, JSON, etc.
       exclude: [
-        'eslint.config.js','postcss.config.js','tailwind.config.js','vite.config.js','src/firebase/firebase.js',
+        'eslint.config.js','postcss.config.js','tailwind.config.js','vite.config.js','src/firebase/firebase.js','build',
       ],
     },
   },
