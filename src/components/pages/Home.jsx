@@ -2,7 +2,7 @@ import HeroSection from "../organisms/HeroSection";
 
 const Home = () => {
   return (
-    <div >
+    <div data-testid="home" >
       <HeroSection />
     </div>
   );

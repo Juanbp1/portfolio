@@ -4,7 +4,7 @@ import DarkModeToogle from "../atoms/DarkModeToogle";
 
 const Header = () => {
   return (
-    <header className="max-w-header mx-auto flex items-center justify-between">
+    <header data-testid="header" className="max-w-header mx-auto flex items-center justify-between">
       <Logo className="dark:!fill-darkMode-primary-light"/>
       <div className="flex w-[56%] justify-between">
         <Nav />
