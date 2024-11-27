@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, it, test } from 'vitest';
 
 describe('App Component', () => {
-  test('renders the app correctly', () => {
+
+  it('debería renderizar main, header y home correctamente', () => {
     render(<App />);
-    expect(screen.getByText(/Hola mundo/i)).toBeInTheDocument();
+    
+    // Verificar que los componentes principales se renderizan
+    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByTestId('header')).toBeInTheDocument();
+    expect(screen.getByTestId('home')).toBeInTheDocument();
   });
 });
