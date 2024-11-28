@@ -1,5 +1,5 @@
 import Nav from "../molecules/Nav";
-import Logo from "../../assets/svg/logo.svg?react";
+import Logo from "../../../public/assets/svg/logo.svg?react";
 import DarkModeToogle from "../atoms/DarkModeToogle";
 
 const Header = () => {
