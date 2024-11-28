@@ -4,6 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react(),svgr()],
   test: {
     globals: true,
@@ -20,6 +21,8 @@ export default defineConfig({
   },
   build: {
     outDir: 'build',
+    assetsDir: 'assets/fonts',
+
   },
 });
 
