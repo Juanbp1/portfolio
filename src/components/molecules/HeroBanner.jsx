@@ -1,6 +1,6 @@
 import { FaCircleArrowDown } from "react-icons/fa6";
 import Buttons from "../atoms/Buttons";
-import Arrow from "../../assets/svg/arrow.svg";
+import Arrow from "../../../public/assets/svg/arrow.svg";
 const HeroBanner = () => {
   return (
     <div className="flex gap-4">
