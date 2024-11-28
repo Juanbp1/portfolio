@@ -12,7 +12,7 @@
   font-family: "Inter";
   src:
     url("../public/assets/fonts/Inter24pt-Bold.woff2") format("woff2"),
-    url("../public/assets/fonts/Inter24pt-Bold.woff2") format("woff"),
+    url("../public/assets/fonts/Inter24pt-Bold.woff") format("woff"),
     url("../public/assets/fonts/Inter_24pt-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
