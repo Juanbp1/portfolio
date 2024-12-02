@@ -7,10 +7,13 @@ const HeroBanner = () => {
       <img src={Arrow} />
       <div className="flex max-w-screen-md flex-col items-start gap-8">
         <h1 className="heading1 dark:text-light">
-          Lorem <span className="text-primary dark:text-darkMode-primary-light">Dolor Ipsum</span> sit amet,
-          consecteur
+          Lorem{" "}
+          <span className="text-primary dark:text-darkMode-primary">
+            Dolor Ipsum
+          </span>{" "}
+          sit amet, consecteur
         </h1>
-        <p className="text1 dark:text-gray-100 ">
+        <p className="text1 dark:text-gray-100">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
