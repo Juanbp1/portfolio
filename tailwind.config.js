@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#3D2CFC",
-        primaryDark: "#0e038c",
+        primaryDark: "#2f2971",
         "primary-light": "#F5F5FF",
         accent: "#FFCF28",
         "accent-light": "#fbe9aa",
@@ -28,9 +28,9 @@ export default {
         error: "#dc3545",
         info: "#17a2b8",
         darkMode: {
-          primary: "#423aa9",
-          "primary-light": "#8B77EE",
-          secondary:"#53157f",
+          primary: "#6a62d3",
+          "primary-light": "#d1d1e4",
+          secondary: "#53157f",
           accent: "#e5af00",
           "accent-light": "#c7a969",
           dark: "#1f1f1f",
@@ -78,6 +78,7 @@ export default {
       maxWidth: {
         container: "1560px",
         header: "1735px",
+        cardAbout: "1400px",
       },
     },
   },
@@ -129,8 +130,7 @@ export default {
           fontWeight: "500",
         },
         ".link:hover": {
-          transform: "scale(1.1)"
-
+          transform: "scale(1.1)",
         },
         ".link:active": {
           color: theme("colors.primary"),
@@ -152,11 +152,8 @@ export default {
         ".btn:hover": {
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         },
-        ".btn:focus": {
-          outline: "none",
-          ringWidth: "2px",
-          ringColor: theme("colors.gray-300"),
-          ringOffsetWidth: "2px",
+        ".btn:active":{
+          transform:'scale(0.8)'
         },
       });
     },

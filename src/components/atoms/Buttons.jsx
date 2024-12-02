@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Buttons = ({ className, icon, label, onclick }) => {
   return (
     <button
-      className={`btn ${className} focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2`}
+      className={`btn ${className} `}
       aria-label={label}
       onClick={onclick}
     >
