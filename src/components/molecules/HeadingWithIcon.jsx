@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
 
-const HeadingWithIcon = ({ titleColor, hrColor, Icon,iconColor }) => {
+const HeadingWithIcon = ({ titleColor, hrColor, Icon, iconColor }) => {
   return (
-    <div className={'flex flex-col items-center'}>
+    <div className={"flex flex-col items-center"}>
       <Icon className={`${iconColor}`} />
       <div className="mt-size-md flex flex-col items-center">
         <h2 className={`${titleColor} heading2`}>Lorem ipsum</h2>
-        <hr
-          className={`${hrColor} mt-size-md w-36 rounded-full border-t-8`}
-        ></hr>
+        <hr className={`${hrColor} mt-size-md h-[8px] w-36 rounded-full border-0`}></hr>
       </div>
     </div>
   );
