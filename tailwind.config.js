@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#3D2CFC",
+        secondary: "#a628ff",
         primaryDark: "#2f2971",
         "primary-light": "#F5F5FF",
         accent: "#FFCF28",
@@ -33,20 +34,21 @@ export default {
           secondary: "#53157f",
           accent: "#e5af00",
           "accent-light": "#c7a969",
-          dark: "#1f1f1f",
-          "gray-50": "#1e1e1e",
-          "gray-100": "#2c2c2c",
-          "gray-200": "#404040",
-          "gray-300": "#555555",
-          "gray-400": "#6a6a6a",
-          "gray-500": "#858585",
-          "gray-600": "#b1b1b1",
-          light: "#ffffff",
           warning: "#d49d07",
           success: "#1e7a37",
           error: "#a72835",
           info: "#11667c",
         },
+
+        html: "#E34F26",
+        css: "#1572B6",
+        sass: "#CC6699",
+        javascript: "#FFCF28",
+        react: "#61DAFB",
+        tailwind: "#38B2AC",
+        jest: "#C21325",
+        git: "#F05032",
+        penpot: "#4040F2",
       },
 
       fontSize: {
@@ -79,6 +81,12 @@ export default {
         container: "1560px",
         header: "1735px",
         cardAbout: "1400px",
+        tagGroup: "850px",
+      },
+      boxShadow: {
+        darkTag: " 2px 2px 4px 0px #64666a",
+        hover: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        tag: "0px 3px 5px 0px #e3e3e3"
       },
     },
   },
@@ -150,10 +158,21 @@ export default {
           transition: "all 0.3s ease-in-out",
         },
         ".btn:hover": {
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          boxShadow: theme("boxShadow.hover"),
         },
-        ".btn:active":{
-          transform:'scale(0.8)'
+        ".btn:active": {
+          transform: "scale(0.8)",
+        },
+        ".techTag": {
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          borderRadius: theme("borderRadius.radius-xl"),
+          background: theme("colors.primary-light"),
+          padding: "8px 29px",
+          fontSize: theme("fontSize.prf-sm"),
+          fontWeight: "500",
+          boxShadow: theme("boxShadow.tag"),
         },
       });
     },

@@ -16,7 +16,7 @@ const Card = () => {
       <div className="flex flex-col items-start justify-center p-size-3xl">
         <HeadingWithIcon
           titleColor="text-white"
-          hrColor="border-accent-light dark:border-accent"
+          hrColor="bg-accent-light dark:bg-accent"
           Icon={GloboDialogo}
           iconColor="dark:fill-white dark:stroke-white"
         />
