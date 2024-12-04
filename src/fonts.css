@@ -27,6 +27,15 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Inter";
+  src:
+    url("../public/assets/fonts/Inter18pt-Medium.woff2") format("woff2"),
+    url("../public/assets/fonts/Inter18pt-Medium.woff") format("woff"),
+    url("../public/assets/fonts/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Inter";
