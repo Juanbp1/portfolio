@@ -22,8 +22,6 @@ const ProjectsSection = () => {
           icon={
             <HiArrowLongRight className="size-size-md text-white dark:text-light" />
           }
-          // size="small"
-          // onclick={() => handleRedirect(liveUrl)}
         />
       </div>
     </div>
