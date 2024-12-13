@@ -38,7 +38,6 @@ const TechnologiesSection = () => {
               key={index}
               name={tech.name}
               iconColor={tech.iconColor}
-              // iconColor={`text-[${tech.iconColor}]`}
               icon={tech.icon}
             />
           ))}

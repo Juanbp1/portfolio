@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 
-const Buttons = ({ className, icon, label, onclick }) => {
+const Buttons = ({ className, icon, label, onclick, size }) => {
+  const sizeClasses =
+    size === "small"
+      ? "px-size-lg py-size-xs text-prf-xs"
+      : "px-size-xl py-size-sm text-prf-sm";
+
   return (
     <button
-      className={`btn ${className} `}
+      className={`btn ${sizeClasses} ${className}`}
       aria-label={label}
       onClick={onclick}
     >
@@ -17,5 +22,6 @@ Buttons.propTypes = {
   icon: PropTypes.node,
   label: PropTypes.string.isRequired,
   onclick: PropTypes.func.isRequired,
+  size: PropTypes.string,
 };
 export default Buttons;
