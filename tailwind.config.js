@@ -74,7 +74,7 @@ export default {
         "size-5xl": "192px",
       },
       borderRadius: {
-        "radius-xs":"4px",
+        "radius-xs": "4px",
         "radius-md": "20px",
         "radius-lg": "35px",
         "radius-xl": "50px",
@@ -204,6 +204,39 @@ export default {
         },
         ".overlay:hover": {
           opacity: 1,
+        },
+        ".contactForm": {
+          backgroundColor: theme("colors.light"),
+          padding: theme("spacing.size-xl"),
+          borderRadius: theme("borderRadius.radius-md"),
+          display: "flex",
+          flexDirection: "column",
+          gap: theme("spacing.size-md"),
+          width: "100%",
+        },
+        ".inputContainer": {
+          display: "flex",
+          flexDirection: "column",
+          gap: theme("spacing.size-xs"),
+        },
+        ".textAreaContainer": {
+          display: "flex",
+          flexDirection: "column",
+          gap: theme("spacing.size-xs"),
+        },
+        ".input": {
+          border: `1px solid ${theme("colors.gray-300")}`,
+          backgroundColor: theme("colors.primary-light"),
+          borderRadius: theme("borderRadius.radius-lg"),
+          height: theme("spacing.size-xl"),
+          padding: `0 0 0 ${theme("spacing.size-md")}`,
+        },
+        ".textarea": {
+          border: `1px solid ${theme("colors.gray-300")}`,
+          backgroundColor: theme("colors.primary-light"),
+          borderRadius: theme("borderRadius.radius-md"),
+          height: theme("spacing.size-5xl"),
+          padding: `${theme("spacing.size-xs")} 0 0 ${theme("spacing.size-md")}`,
         },
       });
     },
