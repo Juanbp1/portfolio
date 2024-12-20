@@ -6,7 +6,7 @@ import TextArea from "../atoms/TextArea";
 import useFormStatus from "../../hooks/useFormStatus";
 
 const ContactForm = () => {
-  const form = useRef();
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,45 +14,42 @@ const ContactForm = () => {
   });
   const { status, updateStatus, resetStatus } = useFormStatus();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const handleChange = ({ target: { name, value } }) => {
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
   const resetForm = () => {
     setTimeout(() => {
-      form.current.reset();
+      if (formRef.current) formRef.current.reset();
+
       setFormData({ name: "", email: "", message: "" });
       resetStatus();
     }, 3000);
   };
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
     updateStatus(true, "Enviando...");
-    emailjs
-      .sendForm(
+
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        form.current,
+        formRef.current,
         import.meta.env.VITE_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          updateStatus(false, "¡Mensaje Enviado!");
-          resetForm();
-        },
-        () => {
-          updateStatus(false, "¡Error al Enviar!");
-          resetForm();
-        },
       );
+      updateStatus(false, "¡Mensaje Enviado!");
+      resetForm();
+
+    } catch { 
+      updateStatus(false, "¡Error al Enviar!");
+      resetForm();
+    }
   };
 
   return (
     <form
-      ref={form}
+      ref={formRef}
       onSubmit={handleSubmit}
       className="contactForm dark:bg-gray-600"
     >
