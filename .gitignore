@@ -21,6 +21,7 @@ build
 src/output.css
 
 # Local environment files
+.env
 *.local
 
 # Editor directories and files
