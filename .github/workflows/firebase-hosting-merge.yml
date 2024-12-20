@@ -5,7 +5,7 @@ name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - 'main'
+      - 'develop'
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -23,6 +23,10 @@ jobs:
 
       - name: Run tests
         if: success()  # Solo ejecutará este paso si los tests fueron exitosos
+        env:
+          VITE_SERVICE_ID: 'fake-service-id'
+          VITE_TEMPLATE_ID: 'fake-template-id'
+          VITE_PUBLIC_KEY: 'fake-public-key'
         run: npm run test
 
       - name: Build project
