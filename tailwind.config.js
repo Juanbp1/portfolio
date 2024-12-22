@@ -59,6 +59,7 @@ export default {
         "prf-sm": "20px",
         "prf-xs": "18px",
       },
+      borderWidth: { "bord-xs": "1.5px" },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
