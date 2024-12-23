@@ -7,7 +7,7 @@ import globoDialogo from "../../../public/assets/svg/globo-dialogo.svg?react";
 
 const ContactSection = () => {
   return (
-    <div className="bg-primary py-size-5xl dark:bg-primaryDark">
+    <div className="bg-primary py-size-5xl dark:bg-primaryDark" id="contact">
       <div className="mx-auto flex max-w-container items-center justify-between">
         <div className="flex items-end">
           <img src={yoContact} className="dark:hidden"/>
