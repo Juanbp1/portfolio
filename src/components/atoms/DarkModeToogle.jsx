@@ -16,7 +16,7 @@ const DarkModeToogle = () => {
   };
 
   return (
-    <label className="flex cursor-pointer items-center">
+    <label className="flex cursor-pointer items-center" data-testid="darkModeToggle">
       {/* Texto que indica el estado */}
       <span className="mr-2 text-sm text-gray-700 dark:text-gray-300">
         {isDarkMode ? "Modo Oscuro" : "Modo Claro"}
