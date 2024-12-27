@@ -24,7 +24,7 @@ const TECHNOLOGIES = [
 ];
 const TechnologiesSection = () => {
   return (
-    <div className="flex flex-col gap-16 pb-48">
+    <div className="flex flex-col gap-16 pb-48" id="technologies">
       <HeadingWithIcon
         titleColor="text-gray-600 dark:text-white"
         hrColor="bg-gradient-to-r from-primary to-secondary dark:from-darkMode-primary dark:to-darkMode-secondary"
