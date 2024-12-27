@@ -6,7 +6,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 const ProjectsSection = () => {
   return (
-    <div className="flex flex-col bg-primary-light pb-size-5xl pt-size-5xl dark:bg-gray-500">
+    <div className="flex flex-col bg-primary-light pb-size-5xl pt-size-5xl dark:bg-gray-500" id="myProjects">
       <div className="mx-auto flex w-full max-w-container flex-col gap-size-2xl">
         <HeadingWithIcon
           titleColor="text-gray-600 dark:text-white"
