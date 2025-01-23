@@ -1,10 +1,9 @@
-import Logo from "../../../public/assets/svg/logo.svg?react";
 import ComillaDoble from "../../../public/assets/svg/comilla-doble.svg?react";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { RiLinkedinFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import Link from "../atoms/Link";
-
+import Logo from "../atoms/Logo";
 const FooterContent = () => {
   const LINKS = [
     { icon: <TbBrandGithubFilled />, url: "" },
