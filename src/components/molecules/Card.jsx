@@ -3,7 +3,14 @@ import GloboDialogo from "../../../public/assets/svg/globo-dialogo.svg?react";
 import Buttons from "../atoms/Buttons";
 import { FiDownload } from "react-icons/fi";
 import yo from "../../../public/assets/design/yo-about.png";
+
 const Card = () => {
+  const DownloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/content/pdf/pdf-ejemplo.pdf";
+    link.download = "ejemplo.pdf";
+    link.click();
+  };
   return (
     <div className="mx-auto flex max-w-cardAbout justify-evenly rounded-radius-xl bg-primary dark:bg-primaryDark">
       <div className="ml-size-3xl flex max-w-[35%] items-end overflow-hidden">
@@ -36,8 +43,9 @@ const Card = () => {
         </div>
         <Buttons
           className="bg-white text-gray-600 hover:bg-gray-100"
-          label="lorem ipsum"
+          label="Descargar CV"
           icon={<FiDownload className="size-size-md text-gray-600" />}
+          onclick={DownloadPDF}
         />
       </div>
     </div>
