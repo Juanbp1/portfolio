@@ -92,6 +92,7 @@ export default {
         hover: "0 4px 6px rgba(0, 0, 0, 0.1)",
         tag: "0px 3px 5px 0px #e3e3e3",
         cardProject: "0px 3px 5px 0px #b1b2b5",
+        cardProjectDark:"inset 4px 4px 8px #00000099, inset -4px -4px 8px #e3e3e31A"
       },
       keyframes: {
         slideIn: {
@@ -202,6 +203,9 @@ export default {
           overflow: "hidden",
           padding: theme("spacing.size-lg"),
           position: "relative",
+        },
+        ".cardProject-dark":{
+          boxShadow:theme("boxShadow.cardProjectDark")
         },
         ".overlay": {
           position: "absolute",
