@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import ButtonsProject from '../components/molecules/ButtonsProject'; // Ajusta la ruta de importación según tu estructura
+import ButtonsProject from '../components/molecules/ButtonsProject';
 import { describe, expect, it, vi } from 'vitest';
 
 describe('Verificar que funciona el componente ButtonsProject', () => {
