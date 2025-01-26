@@ -12,7 +12,7 @@ const Project = ({
 }) => {
   return (
     <div className="max-w-cardProject">
-      <div className={`${cardColor} cardProject mb-size-xl`}>
+      <div className={`${cardColor} cardProject dark:cardProject-dark mb-size-xl`}>
         <img src={imgSrc} alt={imgAlt} className="rounded-radius-xs" />
         <div className="overlay">
           <ButtonsProject caseStudyUrl={caseStudyUrl} liveUrl={liveUrl} />
