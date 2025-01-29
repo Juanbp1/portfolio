@@ -27,7 +27,7 @@ const Card = () => {
           Icon={GloboDialogo}
           iconColor="dark:fill-white dark:stroke-white"
         />
-        <div className="text2 mb-size-2xl mt-size-2xl space-y-6 text-primary-light dark:text-darkMode-primary-light">
+        <div className="text2 mb-size-2xl mt-size-2xl space-y-size-md text-primary-light dark:text-darkMode-primary-light">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

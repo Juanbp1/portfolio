@@ -12,7 +12,7 @@ const ButtonsProject = ({ liveUrl, caseStudyUrl }) => {
     }
   };
   return (
-    <div className="btnContainer flex h-[80%] flex-col items-center justify-evenly">
+    <div className="btnContainer">
       <Buttons
         className="bg-white text-gray-600 hover:bg-gray-100"
         label="Ver en vivo"
