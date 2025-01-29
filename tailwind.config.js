@@ -92,16 +92,17 @@ export default {
         hover: "0 4px 6px rgba(0, 0, 0, 0.1)",
         tag: "0px 3px 5px 0px #e3e3e3",
         cardProject: "0px 3px 5px 0px #b1b2b5",
-        cardProjectDark:"inset 4px 4px 8px #00000099, inset -4px -4px 8px #e3e3e31A"
+        cardProjectDark:
+          "inset 4px 4px 8px #00000099, inset -4px -4px 8px #e3e3e31A",
       },
       keyframes: {
         slideIn: {
-          "0%": { transform: "translateY(-100%)", opacity: "0"   },
-          "100%": { transform: "translateY(0%)", opacity: "1"    },
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" },
         },
         slideOut: {
           "0%": { transform: "translateY(0%)", opacity: "1" },
-          "100%": { transform: "translateY(-100%)", opacity: "0"},
+          "100%": { transform: "translateY(-100%)", opacity: "0" },
         },
       },
       animation: {
@@ -176,6 +177,13 @@ export default {
           color: theme("colors.light"),
           transition: "all 0.3s ease-in-out",
         },
+        ".btnContainer": {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+          height: "80%",
+        },
         ".btn:hover": {
           boxShadow: theme("boxShadow.hover"),
         },
@@ -204,8 +212,8 @@ export default {
           padding: theme("spacing.size-lg"),
           position: "relative",
         },
-        ".cardProject-dark":{
-          boxShadow:theme("boxShadow.cardProjectDark")
+        ".cardProject-dark": {
+          boxShadow: theme("boxShadow.cardProjectDark"),
         },
         ".overlay": {
           position: "absolute",
@@ -255,6 +263,45 @@ export default {
           borderRadius: theme("borderRadius.radius-md"),
           height: theme("spacing.size-5xl"),
           padding: `${theme("spacing.size-xs")} 0 0 ${theme("spacing.size-md")}`,
+        },
+        ".slider": {
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          borderRadius: "9999px",
+          backgroundColor: theme("colors.accent"),
+          padding: "4px",
+          transition:
+            "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
+          height: "36px",
+          width: "80px",
+        },
+          // Iconos
+          '.slider-icon': {
+            position: 'absolute',
+            zIndex: 10,
+            width:theme('size.size-sm'),
+            height:theme('size.size-sm'),
+  
+          },
+          '.slider-icon-left': {
+            left: theme('spacing[2.5]'), // 1.5 unidades de espaciado
+          },
+          '.slider-icon-right': {
+            right: theme('spacing[2.5]'), // 1.5 unidades de espaciado
+          },
+        '.slider-circle': {
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: "28px",
+          height: "28px",
+          borderRadius: theme('borderRadius.full'),
+          backgroundColor: theme('colors.light'),
+          boxShadow: theme('boxShadow.md'),
+          transition: 'transform 300ms ease-in-out',
+          transform: 'translateX(0)', // Posición inicial
         },
       });
     },
