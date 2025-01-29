@@ -16,7 +16,10 @@ const DarkModeToogle = () => {
   };
 
   return (
-    <label className="flex cursor-pointer items-center" data-testid="darkModeToggle">
+    <label
+      className="flex cursor-pointer items-center"
+      data-testid="darkModeToggle"
+    >
       {/* Texto que indica el estado */}
       <span className="mr-2 text-sm text-gray-700 dark:text-gray-300">
         {isDarkMode ? "Modo Oscuro" : "Modo Claro"}
@@ -32,14 +35,12 @@ const DarkModeToogle = () => {
       />
 
       {/* El slider estilizado */}
-      <div className="relative">
-        <div className="flex h-9 w-20 items-center rounded-full bg-accent p-1 transition-colors duration-300 dark:bg-primary">
-          <IoMoon className="absolute right-1.5 z-10 size-size-md text-white dark:text-black" />
-          <IoSunny className="absolute left-1.5 z-10 size-size-md text-dark dark:text-white" />
+      <div className="slider dark:bg-primary">
+        <IoMoon className="slider-icon slider-icon-right text-white dark:text-black" />
+        <IoSunny className="slider-icon slider-icon-left text-dark dark:text-white" />
 
-          {/* El círculo que se desliza */}
-          <div className="absolute flex h-7 w-7 translate-x-0 transform items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out dark:translate-x-11"></div>
-        </div>
+        {/* El círculo que se desliza */}
+        <div className="slider-circle dark:translate-x-11"></div>
       </div>
     </label>
   );
