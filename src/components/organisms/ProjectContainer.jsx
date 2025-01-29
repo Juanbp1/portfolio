@@ -6,7 +6,7 @@ const ProjectContainer = ({ projectsToShow }) => {
   const projectsVisible = PROJECTS.slice(0, projectsToShow); // Mostrar proyectos según el estado
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(500px,1fr))] gap-y-12">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(500px,1fr))] gap-y-size-xl">
       {projectsVisible.map((project, index) => (
         <Project {...project} key={index} />
       ))}
