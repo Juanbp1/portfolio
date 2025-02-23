@@ -2,7 +2,9 @@ import HeadingWithIcon from "./HeadingWithIcon";
 import GloboDialogo from "../../../public/assets/svg/globo-dialogo.svg?react";
 import Buttons from "../atoms/Buttons";
 import { FiDownload } from "react-icons/fi";
-import yo from "../../../public/assets/design/yo-about.png";
+import yoPortrait from "../../../public/assets/design/yo-portrait.png";
+import firm from "../../../public/assets/design/firm.png";
+import SocialNetworks from "./SocialNetworks";
 
 const Card = () => {
   const DownloadPDF = () => {
@@ -13,14 +15,11 @@ const Card = () => {
   };
   return (
     <div className="mx-auto flex max-w-cardAbout justify-evenly rounded-radius-xl bg-primary dark:bg-primaryDark">
-      <div className="ml-size-3xl flex max-w-[35%] items-end overflow-hidden">
-        <img
-          alt=""
-          src={yo}
-          className="relative -bottom-10 w-full object-cover"
-        />
+      <div className="flex flex-col items-center justify-center gap-size-xl">
+        <img alt="" src={yoPortrait} className="relative object-cover" />
+        <SocialNetworks bgColor="bg-gray-600" gap="gap-size-lg" />
       </div>
-      <div className="flex flex-col items-start justify-center p-size-3xl">
+      <div className="flex max-w-[50%] flex-col items-start justify-center py-size-3xl">
         <HeadingWithIcon
           titleColor="text-white"
           hrColor="bg-accent-light dark:bg-accent"
@@ -41,12 +40,15 @@ const Card = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <Buttons
-          className="bg-white text-gray-600 hover:bg-gray-100"
-          label="Descargar CV"
-          icon={<FiDownload className="size-size-md text-gray-600" />}
-          onclick={DownloadPDF}
-        />
+        <div className="w-[93%] flex items-center justify-between">
+          <Buttons
+            className="bg-white text-gray-600 hover:bg-gray-100"
+            label="Descargar CV"
+            icon={<FiDownload className="size-size-md text-gray-600" />}
+            onclick={DownloadPDF}
+          />
+          <img alt="" src={firm} />
+        </div>
       </div>
     </div>
   );
