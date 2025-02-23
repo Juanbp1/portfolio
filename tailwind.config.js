@@ -276,32 +276,31 @@ export default {
           height: "36px",
           width: "80px",
         },
-          // Iconos
-          '.slider-icon': {
-            position: 'absolute',
-            zIndex: 10,
-            width:theme('size.size-sm'),
-            height:theme('size.size-sm'),
-  
-          },
-          '.slider-icon-left': {
-            left: theme('spacing[2.5]'), // 1.5 unidades de espaciado
-          },
-          '.slider-icon-right': {
-            right: theme('spacing[2.5]'), // 1.5 unidades de espaciado
-          },
-        '.slider-circle': {
-          position: 'absolute',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+        // Iconos
+        ".slider-icon": {
+          position: "absolute",
+          zIndex: 10,
+          width: theme("size.size-sm"),
+          height: theme("size.size-sm"),
+        },
+        ".slider-icon-left": {
+          left: theme("spacing[2.5]"), // 1.5 unidades de espaciado
+        },
+        ".slider-icon-right": {
+          right: theme("spacing[2.5]"), // 1.5 unidades de espaciado
+        },
+        ".slider-circle": {
+          position: "absolute",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           width: "28px",
           height: "28px",
-          borderRadius: theme('borderRadius.full'),
-          backgroundColor: theme('colors.light'),
-          boxShadow: theme('boxShadow.md'),
-          transition: 'transform 300ms ease-in-out',
-          transform: 'translateX(0)', // Posición inicial
+          borderRadius: theme("borderRadius.full"),
+          backgroundColor: theme("colors.light"),
+          boxShadow: theme("boxShadow.md"),
+          transition: "transform 300ms ease-in-out",
+          transform: "translateX(0)", // Posición inicial
         },
       });
     },
