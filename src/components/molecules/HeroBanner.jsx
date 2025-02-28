@@ -3,9 +3,9 @@ import Buttons from "../atoms/Buttons";
 import Arrow from "../../../public/assets/svg/arrow.svg";
 const HeroBanner = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-size-sm">
       <img src={Arrow} />
-      <div className="flex max-w-screen-md flex-col items-start gap-8">
+      <div className="flex max-w-screen-md flex-col items-start gap-size-lg">
         <h1 className="heading1 dark:text-light">
           Lorem{" "}
           <span className="text-primary dark:text-darkMode-primary">
