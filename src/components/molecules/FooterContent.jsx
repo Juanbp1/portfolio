@@ -1,16 +1,9 @@
-import Logo from "../../../public/assets/svg/logo.svg?react";
+import PropTypes from "prop-types";
 import ComillaDoble from "../../../public/assets/svg/comilla-doble.svg?react";
-import { TbBrandGithubFilled } from "react-icons/tb";
-import { RiLinkedinFill } from "react-icons/ri";
-import { MdEmail } from "react-icons/md";
 import Link from "../atoms/Link";
-
+import Logo from "../atoms/Logo";
+import SocialNetworks from "./SocialNetworks";
 const FooterContent = () => {
-  const LINKS = [
-    { icon: <TbBrandGithubFilled />, url: "" },
-    { icon: <RiLinkedinFill />, url: "" },
-    { icon: <MdEmail />, url: "" },
-  ];
   return (
     <div className="flex w-[30%] flex-col items-center gap-size-lg text-center">
       <Logo className="dark:!fill-light" />
@@ -22,13 +15,11 @@ const FooterContent = () => {
         </p>
         <ComillaDoble className="absolute -bottom-size-xl -right-size-xs rotate-180" />
       </div>
-      <div className="flex gap-size-xl">
-        {LINKS.map((link, index) => (
-          <Link key={index} link={link} />
-        ))}
-      </div>
+      <SocialNetworks bgColor="bg-primary" />
     </div>
   );
 };
-
+Link.propTypes = {
+  link: PropTypes.object.isRequired,
+};
 export default FooterContent;

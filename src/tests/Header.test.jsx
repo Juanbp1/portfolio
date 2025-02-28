@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import Header from "../components/organisms/Header";
 import HeroSection from "../components/organisms/HeroSection";
 import Main from "../components/organisms/Main";
+import { MemoryRouter } from "react-router-dom";
 
 beforeEach(() => {
   // Restablece el scroll antes de cada prueba
@@ -12,12 +13,20 @@ beforeEach(() => {
 describe("Header", () => {
 
   it("se renderiza el header", () => {
-    render(<Header />);
-    expect(screen.getByTestId("header")).toBeInTheDocument();
+    const { getByTestId } = render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(getByTestId("header")).toBeInTheDocument();
   });
 
   it("muestra Nav, Logo, y DarkModeToggle", () => {
-    render(<Header />);
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
     expect(screen.getByTestId("navMenu")).toBeInTheDocument();
     expect(screen.getByTestId("logo")).toBeInTheDocument();
     expect(screen.getByTestId("darkModeToggle")).toBeInTheDocument();
@@ -25,10 +34,12 @@ describe("Header", () => {
 
   it("establece scrollDirection en null cuando currentScrollY es 0", async () => {
     render(
-      <Main>
-        <Header />
-        <HeroSection />
-      </Main>
+      <MemoryRouter>
+        <Main>
+          <Header />
+          <HeroSection />
+        </Main>
+      </MemoryRouter>
     );
     window.scrollTo(0, 0); // Simula el scroll en 0
     fireEvent.scroll(window);
@@ -40,59 +51,67 @@ describe("Header", () => {
 
   it("establece scrollDirection como 'down' cuando el scroll baja", () => {
     render(
-      <Main>
-        <Header />
-        <HeroSection />
-      </Main>
+      <MemoryRouter>
+        <Main>
+          <Header />
+          <HeroSection />
+        </Main>
+      </MemoryRouter>
     );
     window.scrollTo(0, 0); // Scroll inicial
     fireEvent.scroll(window, { target: { scrollY: 1500 } }); // Simula scroll hacia abajo
-    waitFor(() => {
+     waitFor(() => {
       expect(screen.getByTestId("header")).toHaveClass("animate-slideOut");
     });
   });
 
   it("establece scrollDirection como 'up' cuando el scroll sube", () => {
     render(
-      <Main>
-        <Header />
-        <HeroSection />
-      </Main>
+      <MemoryRouter>
+        <Main>
+          <Header />
+          <HeroSection />
+        </Main>
+      </MemoryRouter>
     );
     window.scrollTo(0, 1500); // Scroll inicial
     fireEvent.scroll(window, { target: { scrollY: 1000 } }); // Simula scroll hacia arriba
-    waitFor(() => {
+     waitFor(() => {
       expect(screen.getByTestId("header")).toHaveClass("animate-slideIn");
     });
   });
 
-  it("cambia las clases de acuerdo a scrollDirection", () => {
+  it("cambia las clases de acuerdo a scrollDirection", async () => {
     render(
-      <Main>
-        <Header />
-        <HeroSection />
-      </Main>
+      <MemoryRouter>
+        <Main>
+          <Header />
+          <HeroSection />
+        </Main>
+      </MemoryRouter>
     );
 
     fireEvent.scroll(window, { target: { scrollY: 1500 } }); // Scroll hacia abajo
-    waitFor(() => {
+    await waitFor(() => {
       expect(screen.getByTestId("header")).toHaveClass("animate-slideOut");
     });
 
     fireEvent.scroll(window, { target: { scrollY: 1000 } }); // Scroll hacia arriba
-    waitFor(() => {
+    await waitFor(() => {
       expect(screen.getByTestId("header")).toHaveClass("animate-slideIn");
     });
   });
 
   it("se vuelve sticky después de hacer scroll", async () => {
     render(
-      <Main>
-        <Header />
-        <HeroSection />
-      </Main>
+      <MemoryRouter>
+        <Main>
+          <Header />
+          <HeroSection />
+        </Main>
+      </MemoryRouter>
     );
-    
+
     // Simula el scroll en 0, el header no debe ser sticky
     fireEvent.scroll(window, { target: { scrollY: 0 } });
     await waitFor(() => {
