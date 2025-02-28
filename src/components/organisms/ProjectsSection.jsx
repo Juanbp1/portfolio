@@ -27,7 +27,7 @@ const ProjectsSection = () => {
         <ProjectContainer projectsToShow={projectsToShow} />
         {projectsToShow <= 3 && (
           <Buttons
-            className="mx-auto bg-primary text-white hover:bg-primaryDark dark:bg-light dark:text-gray-600"
+            className="mx-auto bg-gray-600 dark:bg-light dark:text-gray-500"
             label="Ver mas"
             icon={
               <HiArrowLongRight className="size-size-md text-white dark:text-gray-600" />
