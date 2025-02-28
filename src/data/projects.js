@@ -28,5 +28,30 @@ const PROJECTS = [
       imgSrc: image,
       imgAlt: "Image 3",
     },
+    {
+      cardColor: "bg-blue-500",
+      title: "E-commerce App",
+      text: "Aplicación web para una tienda en línea, integrando pasarelas de pago.",
+      caseStudyUrl: "https://ejemplo.com/caso-estudio/ecommerce",
+      liveUrl: "https://ecommerce-app.web.app",
+      imgSrc: image,
+      imgAlt: "Image 3",
+    },  {
+      cardColor: "bg-blue-500",
+      title: "E-commerce App",
+      text: "Aplicación web para una tienda en línea, integrando pasarelas de pago.",
+      caseStudyUrl: "https://ejemplo.com/caso-estudio/ecommerce",
+      liveUrl: "https://ecommerce-app.web.app",
+      imgSrc: image,
+      imgAlt: "Image 3",
+    },  {
+      cardColor: "bg-blue-500",
+      title: "E-commerce App",
+      text: "Aplicación web para una tienda en línea, integrando pasarelas de pago.",
+      caseStudyUrl: "https://ejemplo.com/caso-estudio/ecommerce",
+      liveUrl: "https://ecommerce-app.web.app",
+      imgSrc: image,
+      imgAlt: "Image 3",
+    },
   ];
 export default PROJECTS;
