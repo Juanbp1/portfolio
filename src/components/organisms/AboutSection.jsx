@@ -1,7 +1,7 @@
 import Card from "../molecules/Card";
 const AboutSection = () => {
   return (
-    <div className="pb-48" id="aboutMe">
+    <div className="pb-size-5xl" id="aboutMe">
       <Card />
     </div>
   );

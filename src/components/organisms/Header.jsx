@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Nav from "../molecules/Nav";
-import Logo from "../../../public/assets/svg/logo.svg?react";
+import Logo from "../atoms/Logo";
 import DarkModeToggle from "../atoms/DarkModeToogle";
 
 const Header = () => {
@@ -41,16 +41,16 @@ const Header = () => {
       className={`${
         isSticky ? "sticky top-0" : ""
       } z-10 w-full bg-light transition-opacity duration-500 dark:bg-gray-600 ${
-        scrollDirection === "up" 
+        scrollDirection === "up"
           ? "animate-slideIn"
           : scrollDirection === "down" && scrollDirection !== null
-          ? "animate-slideOut"
-          : ""
+            ? "animate-slideOut"
+            : ""
       }`}
       id="header"
     >
       <div className="mx-auto flex w-full max-w-header items-center justify-between">
-        <Logo className="dark:!fill-darkMode-primary" data-testid="logo"/>
+        <Logo className="dark:!fill-darkMode-primary" />
         <div className="flex w-[56%] justify-between">
           <Nav />
           <DarkModeToggle />
