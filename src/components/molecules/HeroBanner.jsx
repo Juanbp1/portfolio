@@ -1,10 +1,12 @@
 import { FaCircleArrowDown } from "react-icons/fa6";
 import Buttons from "../atoms/Buttons";
 import Arrow from "../../../public/assets/svg/arrow.svg";
+import smoothScroll from "../../utils/smoothScroll";
+
 const HeroBanner = () => {
   return (
     <div className="flex gap-size-sm">
-      <img src={Arrow} />
+      <img className="scale-90" src={Arrow} />
       <div className="flex max-w-screen-md flex-col items-start gap-size-lg">
         <h1 className="heading1 dark:text-light">
           Lorem{" "}
@@ -23,7 +25,7 @@ const HeroBanner = () => {
           className={
             "bg-primary hover:bg-primaryDark dark:bg-gradient-to-r dark:from-darkMode-secondary dark:to-darkMode-primary"
           }
-          onclick={""}
+          onclick={(e) => smoothScroll(e, "#myProjects")}
         />
       </div>
     </div>
