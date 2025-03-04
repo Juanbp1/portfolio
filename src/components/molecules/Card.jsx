@@ -16,7 +16,11 @@ const Card = () => {
   return (
     <div className="mx-auto flex max-w-cardAbout justify-evenly rounded-radius-xl bg-primary dark:bg-primaryDark">
       <div className="flex flex-col items-center justify-center gap-size-xl">
-        <img alt="" src={yoPortrait} className="relative object-cover" />
+        <img
+          alt=""
+          src={yoPortrait}
+          className="relative w-[75%] object-cover"
+        />
         <SocialNetworks bgColor="bg-gray-600" gap="gap-size-lg" />
       </div>
       <div className="flex max-w-[50%] flex-col items-start justify-center py-size-3xl">
@@ -40,14 +44,14 @@ const Card = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="w-[93%] flex items-center justify-between">
+        <div className="flex w-[93%] items-center justify-between">
           <Buttons
             className="bg-white text-gray-600 hover:bg-gray-100"
             label="Descargar CV"
             icon={<FiDownload className="size-size-md text-gray-600" />}
             onclick={DownloadPDF}
           />
-          <img alt="" src={firm} />
+          <img className="w-[45%]" alt="" src={firm} />
         </div>
       </div>
     </div>
