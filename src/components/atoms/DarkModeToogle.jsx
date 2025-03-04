@@ -40,7 +40,7 @@ const DarkModeToogle = () => {
         <IoSunny className="slider-icon slider-icon-left text-dark dark:text-white" />
 
         {/* El círculo que se desliza */}
-        <div className="slider-circle dark:translate-x-11"></div>
+        <div className="slider-circle dark:translate-x-[3.25rem]"></div>
       </div>
     </label>
   );
