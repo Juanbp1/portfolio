@@ -10,9 +10,9 @@ const ContactSection = () => {
     <div className="bg-primary py-size-5xl dark:bg-primaryDark" id="contact">
       <div className="mx-auto flex max-w-container items-center justify-between">
         <div className="flex items-end">
-          <img src={yoContact} className="dark:hidden"/>
-          <img src={yoContactDark} hidden className="dark:block" />
-          <Arrow className="h-fit w-[30%] dark:fill-accent" />
+          <img src={yoContact} className="w-[55%] dark:hidden" />
+          <img src={yoContactDark} hidden className="w-[55%] dark:block" />
+          <Arrow className="h-fit w-[30%] scale-90 dark:fill-accent" />
         </div>
         <div className="flex w-[40%] flex-col gap-size-2xl">
           <HeadingWithIcon
