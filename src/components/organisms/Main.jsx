@@ -1,9 +1,16 @@
 import PropTypes from "prop-types";
-
-const Main = ({ children }) => {
-  return <main className="dark:bg-gray-600 bg-light" data-testid="main">{children}</main>;
+const Main = ({ children, isOpenMenu }) => {
+  return (
+    <main
+      className={`${isOpenMenu === true ? "before:backdrop-modal" : ""}  bg-light dark:bg-gray-600`}
+      data-testid="main"
+    >
+      {children}
+    </main>
+  );
 };
 Main.propTypes = {
   children: PropTypes.node.isRequired,
+  isOpenMenu: PropTypes.bool.isRequired
 };
-export default Main; 
+export default Main;
