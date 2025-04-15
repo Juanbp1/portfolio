@@ -112,12 +112,12 @@ export default {
           "100%": { transform: "translateY(-100%)", opacity: "0" },
         },
         slideInX: {
-          "0%": { transform: "translateX(100%)", opacity: "1" },
+          "0%": { transform: "translateX(150%)", opacity: "1" },
           "100%": { transform: "translateX(0%)", opacity: "1" },
         },
         slideOutX: {
           "0%": { transform: "translateX(0%)", opacity: "1" },
-          "100%": { transform: "translateX(100%)", opacity: "1" },
+          "100%": { transform: "translateX(150%)", opacity: "1" },
         },
       },
       animation: {
@@ -304,10 +304,10 @@ export default {
           height: theme("size.size-sm"),
         },
         ".slider-icon-left": {
-          left: theme("spacing[2.5]"), // 1.5 unidades de espaciado
+          left: "15%", // 1.5 unidades de espaciado
         },
         ".slider-icon-right": {
-          right: theme("spacing[2.5]"), // 1.5 unidades de espaciado
+          right: "15%", // 1.5 unidades de espaciado
         },
         ".slider-circle": {
           position: "absolute",
