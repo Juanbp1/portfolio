@@ -50,7 +50,14 @@ export default {
         git: "#F05032",
         penpot: "#4040F2",
       },
-
+      screens: {
+        "2xl": "1800px", // Ultra-wide
+        xl: "1450px", // Pantallas grandes
+        lg: "1200px", // Laptop estándar
+        md: "900px", // Tablet
+        sm: "700px", // Móvil grande / tablet pequeña
+        xs: "300px", // Móvil pequeño
+      },
       fontSize: {
         "h1-lg": "4.375rem",
         "h2-md": "3.125rem",
@@ -96,18 +103,28 @@ export default {
           "inset 4px 4px 8px #00000099, inset -4px -4px 8px #e3e3e31A",
       },
       keyframes: {
-        slideIn: {
+        slideInY: {
           "0%": { transform: "translateY(-100%)", opacity: "0" },
           "100%": { transform: "translateY(0%)", opacity: "1" },
         },
-        slideOut: {
+        slideOutY: {
           "0%": { transform: "translateY(0%)", opacity: "1" },
           "100%": { transform: "translateY(-100%)", opacity: "0" },
         },
+        slideInX: {
+          "0%": { transform: "translateX(100%)", opacity: "1" },
+          "100%": { transform: "translateX(0%)", opacity: "1" },
+        },
+        slideOutX: {
+          "0%": { transform: "translateX(0%)", opacity: "1" },
+          "100%": { transform: "translateX(100%)", opacity: "1" },
+        },
       },
       animation: {
-        slideIn: "slideIn 0.5s ease-out forwards",
-        slideOut: "slideOut 0.5s ease-out forwards",
+        slideInY: "slideInY 0.5s ease-out forwards",
+        slideOutY: "slideOutY 0.5s ease-out forwards",
+        slideInX: "slideInX 0.5s ease-out forwards",
+        slideOutX: "slideOutX 0.5s ease-out forwards",
       },
     },
   },
@@ -211,6 +228,9 @@ export default {
           overflow: "hidden",
           padding: theme("spacing.size-lg"),
           position: "relative",
+          top: "0",
+          left: "0",
+          zIndex:"0"
         },
         ".cardProject-dark": {
           boxShadow: theme("boxShadow.cardProjectDark"),
@@ -301,6 +321,46 @@ export default {
           boxShadow: theme("boxShadow.md"),
           transition: "transform 300ms ease-in-out",
           transform: "translateX(0)", // Posición inicial
+        },
+        ".backdrop-modal":{
+          position:"fixed",
+          top:"0",
+          left:"0",
+          width:"100%",
+          height:"100vh",
+          backgroundColor:"rgba(0,0,0,0.5)",
+          backdropFilter:"blur(5px)",
+          zIndex:"10",
+        },
+        ".mobile-hidden": {
+          "@media (max-width: 639px)": {
+            // Aplicado solo para pantallas menores a 640px
+            display: "none",
+          },
+        },
+        ".tablet-hidden": {
+          "@media (min-width: 640px) and (max-width: 1023px)": {
+            // Aplicado solo entre 640px y 1023px
+            display: "none",
+          },
+        },
+        ".desktop-hidden": {
+          "@media (min-width: 1024px)": {
+            // Aplicado solo para pantallas mayores a 1024px
+            display: "none",
+          },
+        },
+        ".tablet-mobile-block": {
+          "@media (max-width: 1023px)": {
+            // Mostrar en tablets y móviles (menores a 1024px)
+            display: "flex",
+          },
+        },
+        ".desktop-mobile-block": {
+          "@media (min-width: 640px) and (max-width: 1023px)": {
+            // Mostrar solo en tablet y móvil
+            display: "block",
+          },
         },
       });
     },
