@@ -44,8 +44,8 @@ describe("Header", () => {
     window.scrollTo(0, 0); // Simula el scroll en 0
     fireEvent.scroll(window);
     await waitFor(() => {
-      expect(screen.getByTestId("header")).not.toHaveClass("animate-slideIn");
-      expect(screen.getByTestId("header")).not.toHaveClass("animate-slideOut");
+      expect(screen.getByTestId("header")).not.toHaveClass("animate-slideInY");
+      expect(screen.getByTestId("header")).not.toHaveClass("animate-slideOutY");
     });
   });
 
@@ -61,7 +61,7 @@ describe("Header", () => {
     window.scrollTo(0, 0); // Scroll inicial
     fireEvent.scroll(window, { target: { scrollY: 1500 } }); // Simula scroll hacia abajo
      waitFor(() => {
-      expect(screen.getByTestId("header")).toHaveClass("animate-slideOut");
+      expect(screen.getByTestId("header")).toHaveClass("animate-slideOutY");
     });
   });
 
@@ -77,7 +77,7 @@ describe("Header", () => {
     window.scrollTo(0, 1500); // Scroll inicial
     fireEvent.scroll(window, { target: { scrollY: 1000 } }); // Simula scroll hacia arriba
      waitFor(() => {
-      expect(screen.getByTestId("header")).toHaveClass("animate-slideIn");
+      expect(screen.getByTestId("header")).toHaveClass("animate-slideInY");
     });
   });
 
@@ -93,12 +93,12 @@ describe("Header", () => {
 
     fireEvent.scroll(window, { target: { scrollY: 1500 } }); // Scroll hacia abajo
     await waitFor(() => {
-      expect(screen.getByTestId("header")).toHaveClass("animate-slideOut");
+      expect(screen.getByTestId("header")).toHaveClass("animate-slideOutY");
     });
 
     fireEvent.scroll(window, { target: { scrollY: 1000 } }); // Scroll hacia arriba
     await waitFor(() => {
-      expect(screen.getByTestId("header")).toHaveClass("animate-slideIn");
+      expect(screen.getByTestId("header")).toHaveClass("animate-slideInY");
     });
   });
 
