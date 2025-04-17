@@ -21,7 +21,7 @@ const DarkModeToogle = () => {
       data-testid="darkModeToggle"
     >
       {/* Texto que indica el estado */}
-      <span className="mr-2 text-sm text-gray-700 dark:text-gray-300">
+      <span className="mr-2 text-sm text-gray-700 dark:text-gray-200">
         {isDarkMode ? "Modo Oscuro" : "Modo Claro"}
       </span>
 
@@ -40,7 +40,7 @@ const DarkModeToogle = () => {
         <IoSunny className="slider-icon slider-icon-left text-dark dark:text-white" />
 
         {/* El círculo que se desliza */}
-        <div className="slider-circle dark:translate-x-11"></div>
+        <div className="slider-circle dark:translate-x-[150%]"></div>
       </div>
     </label>
   );
